@@ -1,6 +1,8 @@
 import re
 import pandas as pd
 import argparse
+from openpyxl import load_workbook, formatting, styles
+from openpyxl.styles import PatternFill, Border, Side, Alignment, Protection, Font
 
 #讀入相關的參數
 ap = argparse.ArgumentParser()
