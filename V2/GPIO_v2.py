@@ -123,8 +123,8 @@ def step6_saveFile(txtFilePath, wb):
 filepath = args["txt"]
 
 try:
-    f = step1_openProjectTXT(txtFilePath)
-    print(f"Success: Step1: Open Project TXT- {txtFilePath} -DONE")
+    f = step1_openProjectTXT(filepath)
+    print(f"Success: Step1: Open Project TXT- {filepath} -DONE")
 except:
     print(f"Fail: check step 1: 'function step1_sortProjectTXT'")
 
@@ -161,7 +161,7 @@ except:
 #step6
 #存檔   
 try:
-    txtFilePath = step6_saveFile(txtFilePath, wb)
+    txtFilePath = step6_saveFile(filepath, wb)
     print(f"Success: Step6: Mapped File {txtFilePath} Saved -DONE")
 except:
     print(f"Fail: check step 6: 'function step6_saveFile'")
