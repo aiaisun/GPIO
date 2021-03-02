@@ -119,6 +119,7 @@ def step6_saveFile(txtFilePath, wb):
     return txtFilePath
 
 filepath = args["txt"]
+print("213")
 print(filepath)
 f = open(filepath)
 print(f)
