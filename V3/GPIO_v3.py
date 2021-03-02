@@ -123,7 +123,7 @@ filepath = args["txt"]
 print("213")
 print(filepath)
 print(os.path.abspath(os.getcwd()))
-f = open(filepath.trim())
+f = open(filepath.strip())
 print(f)
 
 # g = open("ORB_ADL_LPDDR5_1125b.txt")
