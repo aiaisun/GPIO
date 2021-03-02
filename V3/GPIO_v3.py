@@ -118,13 +118,11 @@ def step6_saveFile(txtFilePath, wb):
     wb.save(f"{txtFilePath}.xlsx")
     return txtFilePath
 
-
-
 filepath = args["txt"]
 print(filepath)
 
 try:
-    f = step1_openProjectTXT(filepath)
+    f = step1_openProjectTXT("ORB_ADL_LPDDR5_1125b.txt")
     print(f"Success: Step1: Open Project TXT- {filepath} -DONE")
 except:
     print(f"Fail: check step 1: 'function step1_sortProjectTXT'")
