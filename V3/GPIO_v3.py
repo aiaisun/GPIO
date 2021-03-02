@@ -120,13 +120,10 @@ def step6_saveFile(txtFilePath, wb):
     return txtFilePath
 
 filepath = args["txt"].strip()
-print(filepath)
+# print(filepath)
 # print(os.path.abspath(os.getcwd()))
 # f = open(filepath.strip())
 # print(f)
-
-# g = open("ORB_ADL_LPDDR5_1125b.txt")
-# print(g)
 
 try:
     f = step1_openProjectTXT(filepath)
@@ -149,7 +146,7 @@ except:
     
 #step4
 #先找出要的Ball Name
-mainFilePath, sheetName = 'Intel_ballname.xlsx', 'GPIO Implementation'
+mainFilePath, sheetName = 'pyfile/GPIO/Intel_ballname.xlsx', 'GPIO Implementation'
 try:
     wb, ws = step4_extractIntelDoc(mainFilePath, sheetName)
     print(f"Success: Step4: Extract Intel Doc -DONE")
