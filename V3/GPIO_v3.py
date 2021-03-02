@@ -1,6 +1,7 @@
 import re
 import pandas as pd
 import argparse
+import os
 from openpyxl import load_workbook, formatting, styles
 from openpyxl.styles import PatternFill, Border, Side, Alignment, Protection, Font
 
@@ -121,6 +122,7 @@ def step6_saveFile(txtFilePath, wb):
 filepath = args["txt"]
 print("213")
 print(filepath)
+print(os.path.abspath(os.getcwd()))
 f = open(filepath)
 print(f)
 
