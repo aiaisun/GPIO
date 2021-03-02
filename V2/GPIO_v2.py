@@ -121,6 +121,7 @@ def step6_saveFile(txtFilePath, wb):
 
 
 filepath = args["txt"]
+# print(filepath)
 
 try:
     f = step1_openProjectTXT(filepath)
