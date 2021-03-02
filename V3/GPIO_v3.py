@@ -120,47 +120,52 @@ def step6_saveFile(txtFilePath, wb):
 
 filepath = args["txt"]
 print(filepath)
+f = open(filepath)
+print(f)
 
-try:
-    f = step1_openProjectTXT("ORB_ADL_LPDDR5_1125b.txt")
-    print(f"Success: Step1: Open Project TXT- {filepath} -DONE")
-except:
-    print(f"Fail: check step 1: 'function step1_sortProjectTXT'")
+g = open("ORB_ADL_LPDDR5_1125b.txt")
+print(g)
 
-try:
-    rawData = step2_sortProjectTXT(f)
-    print(f"Success: Step2: Sort Project TXT -DONE")
-except:
-    print(f"Fail: check step 2: 'function step2_sortProjectTXT'")
-    
-#step3: 把TXT整理成dictionary  
-try:
-    clearData = step3_sortTXTtoDic(rawData)
-    print(f"Success: Step3: Sort Project TXT to Dic-DONE")
-except:
-    print(f"Fail: check step 3: 'function step3_sortTXTtoDic'")
-    
-#step4
-#先找出要的Ball Name
-mainFilePath, sheetName = 'Intel_ballname.xlsx', 'GPIO Implementation'
-try:
-    wb, ws = step4_extractIntelDoc(mainFilePath, sheetName)
-    print(f"Success: Step4: Extract Intel Doc -DONE")
-except:
-    print(f"Fail: check step 4: 'function step4_extractIntelDoc'")
-    
-#step5
-#mapping Project and Intel
-try:
-    step5_mapping_netname(clearData, ws)
-    print(f"Success: Step5: Mapping Project Net Name -DONE")
-except:
-    print(f"Fail: check step 5: 'function step5_mapping_netname'")
+# try:
+#     f = step1_openProjectTXT("ORB_ADL_LPDDR5_1125b.txt")
+#     print(f"Success: Step1: Open Project TXT- {filepath} -DONE")
+# except:
+#     print(f"Fail: check step 1: 'function step1_sortProjectTXT'")
 
-#step6
-#存檔   
-try:
-    txtFilePath = step6_saveFile(filepath, wb)
-    print(f"Success: Step6: Mapped File {txtFilePath} Saved -DONE")
-except:
-    print(f"Fail: check step 6: 'function step6_saveFile'")
+# try:
+#     rawData = step2_sortProjectTXT(f)
+#     print(f"Success: Step2: Sort Project TXT -DONE")
+# except:
+#     print(f"Fail: check step 2: 'function step2_sortProjectTXT'")
+    
+# #step3: 把TXT整理成dictionary  
+# try:
+#     clearData = step3_sortTXTtoDic(rawData)
+#     print(f"Success: Step3: Sort Project TXT to Dic-DONE")
+# except:
+#     print(f"Fail: check step 3: 'function step3_sortTXTtoDic'")
+    
+# #step4
+# #先找出要的Ball Name
+# mainFilePath, sheetName = 'Intel_ballname.xlsx', 'GPIO Implementation'
+# try:
+#     wb, ws = step4_extractIntelDoc(mainFilePath, sheetName)
+#     print(f"Success: Step4: Extract Intel Doc -DONE")
+# except:
+#     print(f"Fail: check step 4: 'function step4_extractIntelDoc'")
+    
+# #step5
+# #mapping Project and Intel
+# try:
+#     step5_mapping_netname(clearData, ws)
+#     print(f"Success: Step5: Mapping Project Net Name -DONE")
+# except:
+#     print(f"Fail: check step 5: 'function step5_mapping_netname'")
+
+# #step6
+# #存檔   
+# try:
+#     txtFilePath = step6_saveFile(filepath, wb)
+#     print(f"Success: Step6: Mapped File {txtFilePath} Saved -DONE")
+# except:
+#     print(f"Fail: check step 6: 'function step6_saveFile'")
