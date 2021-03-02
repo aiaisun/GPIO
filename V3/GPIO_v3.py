@@ -123,8 +123,8 @@ print(filepath)
 f = open(filepath)
 print(f)
 
-g = open("ORB_ADL_LPDDR5_1125b.txt")
-print(g)
+# g = open("ORB_ADL_LPDDR5_1125b.txt")
+# print(g)
 
 # try:
 #     f = step1_openProjectTXT("ORB_ADL_LPDDR5_1125b.txt")
